@@ -1638,22 +1638,59 @@
 }
 }
 @media(max-width:400px) {
+  .shooting-star {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(-45deg, #5f91ff, #00000000);
+    filter: drop-shadow(0 0 6px #699bff);
+    animation: tail 5000ms ease infinite;
+  }
+
+  .shooting-star::before {
+    position: absolute;
+    content: "";
+    top: calc(50% - 1px);
+    right: 0;
+    height: 2px;
+    background: linear-gradient(-45deg, #00000000, #5f92ff00, #00000000);
+    border-radius: 100%;
+    transform: translateX(50%) rotateZ(45deg);
+    animation: shining 5000ms ease-in-out infinite;
+  }
+
+  .shooting-star::after {
+    position: absolute;
+    content: "";
+    top: calc(50% - 1px);
+    right: 0;
+    height: 2px;
+    background: linear-gradient(-45deg, #00000000, #5f92ff00, #00000000);
+    border-radius: 100%;
+    transform: translateX(50%) rotateZ(-45deg);
+    animation: shining 5000ms ease-in-out infinite;
+  }
 
   .shooting-star:nth-child(1) {
-    top: calc(30%);
+    top: calc(10%);
     right: 110%;
+    animation-delay: 2000ms;
   }
 
   .shooting-star:nth-child(2) {
-    top: calc(40%);
+    top: calc(25%);
     right: 110%;
+    animation-delay: 7500ms;
   }
   .shooting-star:nth-child(3) {
+    display: none;
     top: calc(45%);
     right: 110%;
   }
 
   .shooting-star:nth-child(4) {
+    display: none;
     top: calc(15%);
     right: 110%;
   }
@@ -1661,8 +1698,12 @@
   .shooting-star:nth-child(5) {
     top: calc(20%);
     right: 110%;
+    animation-delay: 1000ms;
   }
-
+  .shooting-star:nth-child(5)::before,
+  .shooting-star:nth-child(5)::after {
+  animation-delay: 1000ms;
+  }
   @keyframes tail {
     0% {
       width: 0;
@@ -1674,6 +1715,23 @@
     100% {
       width: 0;
       transform: translateX(0) translateY(200px) rotateZ(135deg);
+    }
+  }
+  @keyframes shining {
+    0% {
+      width: 0;
+    }
+    10% {
+      width: 10px;
+    }
+    25% {
+      width: 30px;
+    }
+    50% {
+      width: 0px;
+    }
+    100% {
+      width: 0;
     }
   }
   }
