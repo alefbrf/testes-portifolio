@@ -1,6 +1,4 @@
 .container-404 {
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -25,13 +23,13 @@
 
 .title > * {
   display: inline-block;
-  font-size: 200px;
 }
 
 .numero {
   text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
   padding: 0 0.2em;
   font-family: "Russo One", sans-serif;
+  font-size: 180px;
 }
 
 .subtitle {
@@ -148,7 +146,7 @@
 }
 @media screen and (max-width: 580px) {
   .numero {
-    font-size: 90px;
+    font-size: 100px;
   }
 
   .subtitle {
