@@ -138,33 +138,26 @@
   }
 }
 
-@keyframes shooting {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 30px;
-  }
-  100% {
-    width: 0;
-  }
-}
-
 @keyframes shining {
   0% {
     width: 0;
-    transform: translateX(400px) translateY(0) rotateZ(135deg);
   }
   50% {
     width: 30px;
-    transform: translateX(0) translateY(200px) rotateZ(135deg);
   }
   100% {
     width: 0;
-    transform: translateX(0) translateY(400px) rotateZ(135deg);
   }
 }
 
+@keyframes shooting {
+  0% {
+    transform: translateX(400px) translateY(0) rotateZ(135deg);
+  }
+  100% {
+    transform: translateX(0) translateY(400px) rotateZ(135deg);
+  }
+}
 .stars .container {
   position: absolute;
   animation: stars linear infinite;
