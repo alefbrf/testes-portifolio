@@ -55,3 +55,9 @@
 .example-icon {
   display: none;
 }
+
+@media(max-width: 429px) {
+  .example-icon {
+    display: block;
+  }
+}
