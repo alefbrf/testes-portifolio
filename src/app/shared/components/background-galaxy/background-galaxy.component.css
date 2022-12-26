@@ -1596,3 +1596,44 @@
     box-shadow: 0 0 2px #fff, 0 0 4px #fff;
   }
 }
+
+@media(max-width:429px) {
+
+.shooting-star:nth-child(1) {
+  top: calc(30%);
+  right: 100%;
+}
+
+.shooting-star:nth-child(2) {
+  top: calc(40%);
+  right: 100%;
+}
+.shooting-star:nth-child(3) {
+  top: calc(45%);
+  right: 100%;
+}
+
+.shooting-star:nth-child(4) {
+  top: calc(15%);
+  right: 100%;
+}
+
+.shooting-star:nth-child(5) {
+  top: calc(20%);
+  right: 100%;
+}
+
+@keyframes tail {
+  0% {
+    width: 0;
+    transform: translateX(250px) translateY(0) rotateZ(135deg);
+  }
+  30% {
+    width: 100px;
+  }
+  100% {
+    width: 0;
+    transform: translateX(0) translateY(250px) rotateZ(135deg);
+  }
+}
+}
