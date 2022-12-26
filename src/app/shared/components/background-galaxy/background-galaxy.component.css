@@ -49,7 +49,7 @@
   height: 2px;
   background: linear-gradient(-45deg, #5f91ff, #00000000);
   filter: drop-shadow(0 0 6px #699bff);
-  animation: tail 3000ms ease infinite, shooting 3000ms ease-in-out infinite;
+  animation: tail 3000ms ease infinite;
 }
 
 .shooting-star::before {
@@ -129,12 +129,14 @@
 @keyframes tail {
   0% {
     width: 0;
+    transform: translateX(400px) translateY(0) rotateZ(135deg);
   }
   30% {
     width: 100px;
   }
   100% {
     width: 0;
+    transform: translateX(0) translateY(400px) rotateZ(135deg);
   }
 }
 
@@ -150,14 +152,7 @@
   }
 }
 
-@keyframes shooting {
-  0% {
-    transform: translateX(400px) translateY(0) rotateZ(135deg);
-  }
-  100% {
-    transform: translateX(0) translateY(400px) rotateZ(135deg);
-  }
-}
+
 .stars .container {
   position: absolute;
   animation: stars linear infinite;
