@@ -1,8 +1,15 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="container">
   <mat-toolbar class="nav-bar">
-    <button mat-icon-button (click)="snav.toggle()" class="example-icon"><mat-icon class="icone" fontIcon="menu">menu</mat-icon></button>
-    <a class="nome" routerLink="/home" (click)="snav.close()">Alef Bryan</a>
+    <div class="esquerda">
+      <button mat-icon-button (click)="snav.toggle()" class="example-icon"><mat-icon class="icone" fontIcon="menu">menu</mat-icon></button>
+      <a class="nome" routerLink="/home" (click)="snav.close()">Alef Bryan</a>
+    </div>
+    <div class="direita">
+      <a  routerLink="/habilidades" class="botoes-navegacao" routerLinkActive="active-page" ariaCurrentWhenActive="page" (click)="snav.close()">Habilidades</a>
+      <a  routerLink="/projetos" class="botoes-navegacao" routerLinkActive="active-page" ariaCurrentWhenActive="page" (click)="snav.close()">Projetos</a>
+      <a  routerLink="/contato" class="botoes-navegacao" routerLinkActive="active-page" ariaCurrentWhenActive="page" (click)="snav.close()">Contate-me</a>
+    </div>
   </mat-toolbar>
 
   <mat-sidenav-container class="sidenav-container">

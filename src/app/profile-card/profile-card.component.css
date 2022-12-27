@@ -1,3 +1,87 @@
-p {
-  color: aliceblue;
+.perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+}
+.card {
+  width: 200px;
+  height: 170px;
+  margin-bottom: 100px;
+  border: rgb(255, 255, 255) 1px solid;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 10px 0px rgba(0, 250, 250, 0.6),
+  0px 0px 10px 0px rgba(0, 250, 250, 0.6);
+  animation: float 1500ms alternate infinite;
+}
+
+.cartao {
+  width: 150px;
+  height: 120px;
+  border: rgb(255, 255, 255) 1px solid;
+  color: #ffffff;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  clip-path: polygon(10% 100%, 10% 75%, 0% 60%, 0% 15%, 11% 0%, 59% 0%, 64% 8%, 100% 8%, 100% 87%,90% 100%);
+  /*transform: perspective( 100px) rotateY( 20deg );*/
+}
+
+.cartao::before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  clip-path: none;
+}
+
+.cartao-maior {
+  width: 150px;
+  height: 120px;
+  padding-top: -5px;
+  background-color: rgba(0, 252, 252, 0.5);
+}
+
+.holo {
+  width: 150px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 100%;
+  filter: blur(2px);
+  transform: perspective(100px) rotateX(-30deg);
+  animation: holographic 1500ms alternate infinite;
+}
+
+.holo:after {
+  content: "";
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 100%;
+  filter: blur(2px);
+}
+
+.holo + .holo {
+  animation-duration: 750ms;
+  opacity: 0.5;
+}
+
+@keyframes float {
+  0% {
+    will-change: transform;
+    transform: translateY(-30px);
+  }
+  100% {
+    will-change: unset;
+    transform: translateY(0);
+  }
+}
+
+@keyframes holographic {
+  from {
+    will-change: box-shadow;
+    box-shadow: 0 -75px 5px rgba(255,255,255, 0.15), 0 -1px 2px rgba(255,255,255, 0.5), 0 -45px 5px rgba(255,255,255, 0.15), 0 -2px 3px rgba(255,255,255, 0.5), 0 -3px 4px rgba(255,255,255, 0.5), 0 -4px 6px rgba(255,255,255, 0.5), 0 -5px 10px rgba(255,255,255, 0.75), 0 -7px 20px rgba(255,255,255, 0.75), 0 -10px 30px rgba(255,255,255, 0.75), 0 -15px 40px rgba(255,255,255, 0.75), 0 -25px 50px rgba(255,255,255, 0.75), 0 -35px 60px rgba(255,255,255, 0.85), 0 -45px 70px rgba(255,255,255, 0.95), 0 -65px 80px #ffffff, 0 -75px 90px #ffffff;
+  }
+  to {
+    will-change: unset;
+    box-shadow: 0 -1px 5px rgba(255,255,255, 0.15), 0 -1px 2px rgba(255,255,255, 0.5), 0 -1px 5px rgba(255,255,255, 0.15), 0 -2px 3px rgba(255,255,255, 0.5), 0 -3px 4px rgba(255,255,255, 0.5), 0 -4px 6px rgba(255,255,255, 0.5), 0 -5px 7px rgba(255,255,255, 0.75), 0 -7px 10px rgba(255,255,255, 0.75), 0 -10px 15px rgba(255,255,255, 0.75), 0 -15px 20px rgba(255,255,255, 0.75), 0 -25px 25px rgba(255,255,255, 0.75), 0 -35px 30px rgba(255,255,255, 0.85), 0 -45px 35px rgba(255,255,255, 0.95), 0 -65px 40px #ffffff, 0 -75px 50px #00fcfc;
+  }
 }
